@@ -25,7 +25,7 @@ type ProjectInfo = {
 let info = {
   Name="Discipline Oak";
   Description =  "Discipline Oak, behaviour tree library";
-  Version = if isLocalBuild then "0.1-local" else "0.2"+buildVersion
+  Version = if isLocalBuild then "0.2-local" else "0.2"+buildVersion
 }
 
 // Targets
@@ -69,6 +69,7 @@ Target "CreatePackage" (fun _ ->
         {p with
             Authors = authors
             Project = projectName            
+            Version = version
             Description = info.Description                                           
             OutputPath = deployDir            
             ToolPath = nugetPath
@@ -87,6 +88,7 @@ Target "AndroidPack" (fun _ ->
         {p with
             Authors = authors
             Project = projectName+"Android"
+            Version = version
             Description = info.Description                                           
             OutputPath = deployDir            
             ToolPath = nugetPath
