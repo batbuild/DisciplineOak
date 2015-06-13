@@ -69,7 +69,7 @@ Target "CreatePackage" (fun _ ->
         {p with
             Authors = authors
             Project = projectName            
-            Version = version
+            Version = info.Version
             Description = info.Description                                           
             OutputPath = deployDir            
             ToolPath = nugetPath
@@ -88,7 +88,7 @@ Target "AndroidPack" (fun _ ->
         {p with
             Authors = authors
             Project = projectName+"Android"
-            Version = version
+            Version = info.Version
             Description = info.Description                                           
             OutputPath = deployDir            
             ToolPath = nugetPath
