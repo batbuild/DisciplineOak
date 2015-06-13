@@ -75,7 +75,7 @@ Target "CreatePackage" (fun _ ->
             ToolPath = nugetPath
             Summary = info.Description            
             Tags = "behaviour-tree behavior-tree AI"           
-            PublishUrl = getBuildParamOrDefault "nugetrepo" ""
+            PublishUrl = getBuildParamOrDefault "nugetUrl" ""
             AccessKey = getBuildParamOrDefault "nugetkey" ""            
             Publish = hasBuildParam "nugetkey"  
             }) 
@@ -94,7 +94,7 @@ Target "AndroidPack" (fun _ ->
             ToolPath = nugetPath
             Summary = info.Description            
             Tags = "behaviour-tree behavior-tree AI"           
-            PublishUrl = getBuildParamOrDefault "nugetrepo" ""
+            PublishUrl = getBuildParamOrDefault "nugetUrl" ""
             AccessKey = getBuildParamOrDefault "nugetkey" ""            
             Publish = hasBuildParam "nugetkey"  
             }) 
