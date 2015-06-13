@@ -16,7 +16,7 @@ let packagesDir = @".\packages"
 
 // Project info
 let authors = ["Andrew O'Connor";"Andrea Magnorsky"]
-let projectName = "Discipline Oak"
+let projectName = "DisciplineOak"
 type ProjectInfo = { 
     Name: string;
     Description: string; 
@@ -25,7 +25,7 @@ type ProjectInfo = {
 let info = {
   Name="Discipline Oak";
   Description =  "Discipline Oak, behaviour tree library";
-  Version = if isLocalBuild then "0.2-local" else "0.2"+buildVersion
+  Version = if isLocalBuild then "0.2-local" else "0.2."+buildVersion
 }
 
 // Targets
@@ -87,7 +87,7 @@ Target "AndroidPack" (fun _ ->
     NuGet (fun p -> 
         {p with
             Authors = authors
-            Project = projectName+"Android"
+            Project = projectName+".Android"
             Version = info.Version
             Description = info.Description                                           
             OutputPath = deployDir            
